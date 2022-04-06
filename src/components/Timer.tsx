@@ -8,7 +8,8 @@ type Props = {
 
 const Timer: React.FC<Props> = ({interval, city, timezone}) => {
     const [time, setTime] = React.useState(new Date());
-    function tic():void {
+
+    function tic(): void {
         setTime(new Date());
     }
 
@@ -18,10 +19,10 @@ const Timer: React.FC<Props> = ({interval, city, timezone}) => {
 
     return (
         <>
-        <div>
-            <h3>{city}</h3>
-            <label>{time.toLocaleTimeString('en-GB', {timeZone: timezone})}</label>
-        </div>
+            <div>
+                <h3>{city}</h3>
+                <label>{time.toLocaleTimeString('en-GB', {timeZone: timezone})}</label>
+            </div>
         </>
     )
 }

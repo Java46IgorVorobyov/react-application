@@ -90,12 +90,6 @@ function App() {
             </Grid>
         </>
     );
-
-    // <div>
-    //     <Timer zone={'Amsterdam Time'} timezone={'Europe/Amsterdam'}/>
-    //     <Timer zone={'Australia Time'} timezone={'Australia/Sydney'}/>
-    //     <Timer zone={'New-York Time'} timezone={'America/New_York'}/>
-    // </div>
 }
 
 export default App;
