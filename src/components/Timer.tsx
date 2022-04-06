@@ -3,7 +3,6 @@ import React, {useEffect} from "react";
 type Props = {
     interval?: number;
     timezone: string;
-    // city: string;
 }
 
 const Timer: React.FC<Props> = ({interval, timezone}) => {
@@ -20,7 +19,6 @@ const Timer: React.FC<Props> = ({interval, timezone}) => {
     return (
         <>
             <div>
-                {/*<h3>{city}</h3>*/}
                 <label>{time.toLocaleTimeString('en-GB', {timeZone: timezone})}</label>
             </div>
         </>
