@@ -21,7 +21,7 @@ function App() {
                                     Jerusalem
                                 </Typography>
                                 <Typography align={"center"} variant="body2" color="text.secondary">
-                                    <Timer city={''} timezone={'Asia/Jerusalem'}/>
+                                    <Timer timezone={'Asia/Jerusalem'}/>
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -41,7 +41,7 @@ function App() {
                                     Australia
                                 </Typography>
                                 <Typography align={"center"} variant="body2" color="text.secondary">
-                                    <Timer city={''} timezone={'Australia/Sydney'}/>
+                                    <Timer timezone={'Australia/Sydney'}/>
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -61,7 +61,7 @@ function App() {
                                     Amsterdam
                                 </Typography>
                                 <Typography align={"center"} variant="body2" color="text.secondary">
-                                    <Timer city={''} timezone={'Europe/Amsterdam'}/>
+                                    <Timer timezone={'Europe/Amsterdam'}/>
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -81,7 +81,7 @@ function App() {
                                     New-York
                                 </Typography>
                                 <Typography align={"center"} variant="body2" color="text.secondary">
-                                    <Timer city={''} timezone={'America/New_York'}/>
+                                    <Timer timezone={'America/New_York'}/>
                                 </Typography>
                             </CardContent>
                         </CardActionArea>

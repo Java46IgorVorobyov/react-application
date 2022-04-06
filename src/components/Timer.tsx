@@ -3,10 +3,10 @@ import React, {useEffect} from "react";
 type Props = {
     interval?: number;
     timezone: string;
-    city: string;
+    // city: string;
 }
 
-const Timer: React.FC<Props> = ({interval, city, timezone}) => {
+const Timer: React.FC<Props> = ({interval, timezone}) => {
     const [time, setTime] = React.useState(new Date());
 
     function tic(): void {
@@ -20,7 +20,7 @@ const Timer: React.FC<Props> = ({interval, city, timezone}) => {
     return (
         <>
             <div>
-                <h3>{city}</h3>
+                {/*<h3>{city}</h3>*/}
                 <label>{time.toLocaleTimeString('en-GB', {timeZone: timezone})}</label>
             </div>
         </>
