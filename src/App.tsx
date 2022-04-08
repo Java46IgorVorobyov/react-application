@@ -14,9 +14,9 @@ function App() {
     const [componentName, setComponentName] = React.useState<ComponentName>('Choose of color');
 
     const mapComponents: Map<ComponentName, React.ReactNode> = new Map();
-    mapComponents.set('Choose of color', <InputData timeZones={colors} injectTimeZone={setColor}/>);
+    mapComponents.set('Choose of color', <InputData value={colors} injectValue={setColor}/>);
     mapComponents.set('color', <Color color={color}/>);
-    mapComponents.set('input', <InputData timeZones={timeZones} injectTimeZone={setTimeZone}/>);
+    mapComponents.set('input', <InputData value={timeZones} injectValue={setTimeZone}/>);
     mapComponents.set('timer', <Timer timeZone={timeZone}/>);
 
     return (

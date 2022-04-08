@@ -1,15 +1,15 @@
 import React from "react";
 
 type Props = {
-    timeZones: any[],
-    injectTimeZone: (timeZones: string) => void
+    value: any[],
+    injectValue: (timeZones: string) => void
 }
 
 let selectElement: any;
 
-const InputData: React.FC<Props> = ({timeZones, injectTimeZone}) => {
+const InputData: React.FC<Props> = ({value, injectValue}) => {
     function onSelect() {
-        injectTimeZone(selectElement.value);
+        injectValue(selectElement.value);
     }
 
     React.useEffect(() => {
@@ -18,7 +18,7 @@ const InputData: React.FC<Props> = ({timeZones, injectTimeZone}) => {
 
     return <div>
         <select id="selectInputData">
-            {timeZones.map(tz => <option value={tz.name}>{tz.name}</option>)}
+            {value.map(tz => <option value={tz.name}>{tz.name}</option>)}
         </select>
         <button onClick={onSelect}>GO</button>
     </div>
