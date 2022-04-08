@@ -4,24 +4,26 @@ import Timer from "./components/Timer";
 import Color from "./components/Color";
 import timeZones from "./config/time-zones";
 import InputData from "./components/InputData";
+import colors from "./config/colors";
 
-type ComponentName = 'input' | 'timer' | 'color';
+type ComponentName = 'input' | 'timer' | 'color'| 'Choose of color';
 
 function App() {
     const [timeZone, setTimeZone] = React.useState('Asia/Jerusalem');
-    const [color, setColor] = React.useState('red');
-    const [componentName, setComponentName] = React.useState<ComponentName>('input');
+    const [color, setColor] = React.useState('cornflowerblue');
+    const [componentName, setComponentName] = React.useState<ComponentName>('Choose of color');
 
     const mapComponents: Map<ComponentName, React.ReactNode> = new Map();
-    mapComponents.set('color', <Color color={color}></Color>);
-    mapComponents.set('input', <InputData timeZones={timeZones} injectTimeZone={setTimeZone}></InputData>);
-    mapComponents.set('timer', <Timer timeZone={timeZone}></Timer>);
+    mapComponents.set('Choose of color', <InputData timeZones={colors} injectTimeZone={setColor}/>);
+    mapComponents.set('color', <Color color={color}/>);
+    mapComponents.set('input', <InputData timeZones={timeZones} injectTimeZone={setTimeZone}/>);
+    mapComponents.set('timer', <Timer timeZone={timeZone}/>);
 
     return (
-        <div>
+        <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
             {Array.from(mapComponents.keys()).map(k => <button onClick={() => setComponentName(k)}>{k}</button>)}
             {mapComponents.get(componentName)}
-    </div>
+        </div>
     )
 }
 
