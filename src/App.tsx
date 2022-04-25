@@ -1,15 +1,21 @@
 import React from 'react';
-import lifeGameConfig from "./config/lifeGameConfig.json";
-import Life from "./components/Life";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {ROUTES} from "./config/routes-config";
+import Navigator from "./components/navigators/Navigator";
 
 
-
-function App() {
-   return (<div>
-      <Life dimension={lifeGameConfig.dimension} ticInterval={lifeGameConfig.tic}/>
-   </div>)
+const App: React.FC = () => {
+    return <BrowserRouter>
+        <Navigator items={ROUTES}/>
+        <Routes>
+           {getRoutes()}
+        </Routes>
+    </BrowserRouter>
 }
 
 export default App;
 
+function getRoutes(): React.ReactNode {
+   return ROUTES.map(r => <Route key={r.path} path={r.path} element={r.element}/>)
+}
 
