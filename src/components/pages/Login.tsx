@@ -5,5 +5,4 @@ const Login: React.FC = () => {
         Login page is working
     </label>
 }
-
 export default Login;

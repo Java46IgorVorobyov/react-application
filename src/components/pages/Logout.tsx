@@ -5,5 +5,4 @@ const Logout: React.FC = () => {
         Logout page is working
     </label>
 }
-
 export default Logout;
