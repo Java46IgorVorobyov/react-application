@@ -44,7 +44,7 @@ export function useImitator() {
 
     function dispatchRemove() {
         console.log('removing')
-        if (courses.length != 0) {
+        if (courses.length !== 0) {
             const index = getRandomNumber(0, courses.length - 1);
 
             dispatch(removeCourse(courses[index].id));
@@ -55,7 +55,7 @@ export function useImitator() {
 
     function dispatchUpdate() {
         console.log('updating');
-        if (courses.length != 0) {
+        if (courses.length !== 0) {
             const index = getRandomNumber(0, courses.length - 1);
             const course = getRandomCourse(courseData);
             course.id = courses[index].id;

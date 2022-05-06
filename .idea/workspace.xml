@@ -4,32 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork#38/initial-structure">
-      <change afterPath="$PROJECT_DIR$/src/components/pages/StatisticsHours.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/imitator-config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/functions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/useImitator.ts" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Homework#39/useImitator">
+      <change afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorDesktop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorMobile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Courses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Generation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Generation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Logout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/StatisticHours.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/routes-config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes-config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/service-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/service-config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Course.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Course.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/RouteType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/RouteType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CoursesService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceArray.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/useImitator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/useImitator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="life_game" />
+        <entry key="$PROJECT_DIR$" value="sprint--1,_initial-structure" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,7 +111,7 @@
       <workItem from="1650186229650" duration="3000" />
       <workItem from="1650900347642" duration="6306000" />
       <workItem from="1650907588475" duration="1466000" />
-      <workItem from="1650909094958" duration="23580000" />
+      <workItem from="1650909094958" duration="35327000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -208,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650909024519</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Classwork#39/useImitator">
+      <created>1651504062111</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651504062111</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Homework#39/useImitator">
+      <created>1651504295558</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1651504295558</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +243,9 @@
     <MESSAGE value="Homework#36/lifeMatrix, position" />
     <MESSAGE value="Classwork/Homework#37/unit_test" />
     <MESSAGE value="Classwork#38/initial-structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classwork#38/initial-structure" />
+    <MESSAGE value="Classwork#39/useImitator" />
+    <MESSAGE value="Homework#39/useImitator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework#39/useImitator" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
