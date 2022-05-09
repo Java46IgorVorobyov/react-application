@@ -5,7 +5,7 @@ import Navigator from './components/navigators/Navigator';
 import {useImitator} from "./util/useImitator";
 
 const App: React.FC = () => {
-    useImitator();
+    // useImitator();
     const [flNavigate, setFlNavigate] = React.useState<boolean>(true);
     React.useEffect(() => setFlNavigate(false), [])
     return <BrowserRouter>
@@ -13,7 +13,6 @@ const App: React.FC = () => {
         {flNavigate && <Navigate to={COURSES_PATH}></Navigate>}
         <Routes>
             {getRoutes()}
-
         </Routes>
     </BrowserRouter>
 

@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Homework#39/useImitator">
-      <change afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorDesktop.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorMobile.tsx" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork/Homework#40/DesktopAndMobileNavigate">
+      <change afterPath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/useImitator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/useImitator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigators/NavigatorDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorDesktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigators/NavigatorMobile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorMobile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/functions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sprint--1,_initial-structure" />
+        <entry key="$PROJECT_DIR$" value="sprint-3_MUI_Responsive_Navigation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,21 +57,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/igorvorobev/Documents/FrontEnd TelRan/react-applicationn/src/components/pages",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/igorvorobev/Documents/FrontEnd TelRan/react-applicationn/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/igorvorobev/Documents/FrontEnd TelRan/react-applicationn/src/components/pages&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/igorvorobev/Documents/FrontEnd TelRan/react-applicationn/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/pages" />
@@ -111,7 +112,8 @@
       <workItem from="1650186229650" duration="3000" />
       <workItem from="1650900347642" duration="6306000" />
       <workItem from="1650907588475" duration="1466000" />
-      <workItem from="1650909094958" duration="35327000" />
+      <workItem from="1650909094958" duration="35870000" />
+      <workItem from="1651822673397" duration="11571000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -204,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651504295558</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Classwork/Homework#40/DesktopAndMobileNavigate">
+      <created>1651822525068</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1651822525068</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +254,8 @@
     <MESSAGE value="Classwork#38/initial-structure" />
     <MESSAGE value="Classwork#39/useImitator" />
     <MESSAGE value="Homework#39/useImitator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework#39/useImitator" />
+    <MESSAGE value="Classwork/Homework#40/DesktopAndMobileNavigate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classwork/Homework#40/DesktopAndMobileNavigate" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
