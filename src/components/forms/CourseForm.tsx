@@ -1,7 +1,7 @@
 import React from 'react';
 import {Course, createCourse} from "../../models/Course";
 import courseData from "../../config/courseData.json";
-import {Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField} from "@mui/material";
+import {Box, Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField} from "@mui/material";
 import {getRandomNumber} from "../../util/random";
 
 type Props = {
@@ -9,8 +9,8 @@ type Props = {
 }
 
 const CourseForm: React.FC<Props> = ({submitFn}) => {
-    const {courses, minHours, maxHours} = courseData;
-    const initialCourse: Course = createCourse(getRandomNumber(100000, 999999), '', 'Yosef', 10, 5000, new Date());
+    const {courses, minHours, maxHours, minYear, maxYear, minCost, maxCost} = courseData;
+    const initialCourse: Course = createCourse(getRandomNumber(100000, 999999), '', '', 0, 0, new Date());
     const [course, setCourse] = React.useState(initialCourse);
 
     function getCourseItems(courses: string[]): React.ReactNode {
@@ -32,11 +32,29 @@ const CourseForm: React.FC<Props> = ({submitFn}) => {
     function handlerHours(event: any) {
         const courseCopy = {...course};
         courseCopy.hours = +event.target.value;
+        setCourse({...courseCopy});
+    }
+
+    function handlerLecturer(event: any) {
+        const courseCopy = {...course};
+        courseCopy.lecturer = event.target.value;
+        setCourse(courseCopy);
+    }
+
+    function handlerOpeningDate(event: any) {
+        const courseCopy = {...course};
+        courseCopy.openingDate = new Date(event.target.value);
+        setCourse(courseCopy);
+    }
+
+    function handlerCost(event: any) {
+        const courseCopy = {...course};
+        courseCopy.cost = +event.target.value;
         setCourse(courseCopy);
     }
 
     return <form onSubmit={onSubmit}>
-        <Grid container>
+        <Grid container spacing={3} display={"flex"} justifyContent={"center"} p={2}>
             <Grid item xs={12} sm={6}>
                 <FormControl fullWidth required>
                     <InputLabel id="course-select-label">Course Name</InputLabel>
@@ -53,18 +71,53 @@ const CourseForm: React.FC<Props> = ({submitFn}) => {
                 </FormControl>
             </Grid>
             <Grid item xs={12} sm={6}>
-                <TextField type="number" label="Hours" fullWidth required value={course.hours || ''}
+                <FormControl fullWidth required>
+                    <InputLabel id="lecturer-label">Lecturer</InputLabel>
+                    <Select
+                        labelId="lecturer-label"
+                        id="demo-simple-select"
+                        label="Lecturer"
+                        value={course.lecturer}
+                        onChange={handlerLecturer}
+                    >
+                        <MenuItem value="">None</MenuItem>
+                        {getCourseItems(courseData.lectors)}
+                    </Select>
+                </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+                <TextField type="number" label="Hours" fullWidth required
                            inputProps={{
-                               min: `${minHours}-01-01`,
-                               max: `${maxHours}-01-31`,
+                               min: `${minHours}`,
+                               max: `${maxHours}`,
                            }} onChange={handlerHours}/>
             </Grid>
-            <Grid item xs={4}>
-                <Button type="submit">Submit</Button>
+            <Grid item xs={12} sm={6}>
+                <TextField type="number" label="Duration" required fullWidth value={course.cost || ''}
+                           inputProps={{
+                               min: `${minCost}`,
+                               max: `${maxCost}`,
+                           }} onChange={handlerCost}/>
             </Grid>
-            <Grid item xs={4}>
-                <Button type="reset">Reset</Button>
+            <Grid container item xs={12} sm={6} justifyContent={"center"}>
+                <TextField type="date" label="Opening Date" required fullWidth
+                           inputProps={{
+                               min: `${minYear}-01-01`,
+                               max: `${maxYear}-12-31`,
+                           }} onChange={handlerOpeningDate} InputLabelProps={{shrink: true}}/>
             </Grid>
+            {/*<Grid item xs={6}>*/}
+            {/*    <Button type="submit">Submit</Button>*/}
+            {/*    <Button type="reset">Reset</Button>*/}
+            {/*</Grid>*/}
+
+            {/*<Grid item xs={6}>*/}
+            {/*    <Button type="reset">Reset</Button>*/}
+            {/*</Grid>*/}
+        </Grid>
+        <Grid container item justifyContent={"center"}>
+            <Button type="submit">Submit</Button>
+            <Button type="reset">Reset</Button>
         </Grid>
     </form>
 }

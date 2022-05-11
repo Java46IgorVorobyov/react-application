@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork/Homework#40/DesktopAndMobileNavigate">
-      <change afterPath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork/#41/form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigators/NavigatorDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorDesktop.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navigators/NavigatorMobile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/NavigatorMobile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/functions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,8 @@
       <workItem from="1650900347642" duration="6306000" />
       <workItem from="1650907588475" duration="1466000" />
       <workItem from="1650909094958" duration="35870000" />
-      <workItem from="1651822673397" duration="11571000" />
+      <workItem from="1651822673397" duration="19803000" />
+      <workItem from="1652254636536" duration="6609000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -213,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651822525068</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Classwork/#41/form">
+      <created>1652121866512</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652121866512</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +257,8 @@
     <MESSAGE value="Classwork#39/useImitator" />
     <MESSAGE value="Homework#39/useImitator" />
     <MESSAGE value="Classwork/Homework#40/DesktopAndMobileNavigate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classwork/Homework#40/DesktopAndMobileNavigate" />
+    <MESSAGE value="Classwork/#41/form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classwork/#41/form" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
