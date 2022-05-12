@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork/#41/form">
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Homework/#41/addCourseForm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/courseData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/courseData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +109,7 @@
       <workItem from="1650907588475" duration="1466000" />
       <workItem from="1650909094958" duration="35870000" />
       <workItem from="1651822673397" duration="19803000" />
-      <workItem from="1652254636536" duration="6609000" />
+      <workItem from="1652254636536" duration="10851000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -215,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652121866512</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Homework/#41/addCourseForm">
+      <created>1652272306590</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652272306590</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Homework/#41/addCourseForm">
+      <created>1652272428660</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1652272428660</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +273,8 @@
     <MESSAGE value="Homework#39/useImitator" />
     <MESSAGE value="Classwork/Homework#40/DesktopAndMobileNavigate" />
     <MESSAGE value="Classwork/#41/form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Classwork/#41/form" />
+    <MESSAGE value="Homework/#41/addCourseForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework/#41/addCourseForm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
