@@ -7,7 +7,7 @@ import {StateType} from "../../redux/store";
 const StatisticCost: React.FC = () => {
     const courses: Course[] = useSelector<StateType, Course[]>(state => state.courses);
     const statObj = getMinMaxAvgByField(courses, 'cost');
-    return <div>{statObj.min == 0 ? <label style={{fontSize: "2em"}}>No Data</label> :
+    return <div>{statObj.min === 0 ? <label style={{fontSize: "2em"}}>No Data</label> :
         <div style={{fontSize: "1.5em", display: 'flex', justifyContent: 'space-evenly'}}>
             <label>min cost = {statObj.min}</label>
             <label>max cost = {statObj.max}</label>
