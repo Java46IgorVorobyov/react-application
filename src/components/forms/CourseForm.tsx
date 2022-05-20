@@ -2,7 +2,6 @@ import React from "react";
 import {Course, createCourse} from "../../models/Course";
 import courseData from "../../config/courseData.json";
 import {Grid, Select, TextField, FormControl, InputLabel, MenuItem, Button, Box, Typography} from "@mui/material";
-import {getRandomNumber} from "../../util/random";
 
 type Props = {
     submitFn: (course: Course) => void;
@@ -16,7 +15,6 @@ const CourseForm: React.FC<Props> = ({submitFn, courseUpdate}) => {
 
     function onSubmit(event: any) {
         event.preventDefault();
-        console.log(course)
         submitFn(course);
         document.querySelector('form')!.reset();
     }
@@ -163,4 +161,3 @@ function getIsoDate(dateValue: Date): string {
     return dateUTC.toISOString().substring(0, 10);
 
 }
-

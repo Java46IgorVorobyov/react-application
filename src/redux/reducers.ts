@@ -2,7 +2,8 @@ import {Reducer} from "react";
 import {Course} from "../models/Course";
 import {PayloadAction} from "@reduxjs/toolkit";
 import {coursesService} from "../config/service-config";
-import {ADD_COURSE_ACTION, REMOVE_COURSE_ACTION, UPDATE_COURSE_ACTION} from "./actions";
+import {ADD_COURSE_ACTION, AUTH_ACTION, REMOVE_COURSE_ACTION, UPDATE_COURSE_ACTION} from "./actions";
+import {ClientData, emptyClientData} from "../models/ClientData";
 
 export const coursesReducer: Reducer<Course[], PayloadAction<Course | number>> = (courses = [], action) => {
     switch (action.type) {
@@ -20,4 +21,8 @@ export const coursesReducer: Reducer<Course[], PayloadAction<Course | number>> =
             return courses;
     }
     return coursesService.get();
+}
+
+export const clientDataReducer: Reducer<ClientData, PayloadAction<ClientData>> = (clientData = emptyClientData, action): ClientData => {
+    return action.type === AUTH_ACTION ? action.payload : clientData;
 }

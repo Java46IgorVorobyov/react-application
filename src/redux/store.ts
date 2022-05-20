@@ -1,12 +1,17 @@
 import {Course} from "../models/Course";
 import {combineReducers} from "redux";
-import {coursesReducer} from "./reducers";
+import {clientDataReducer, coursesReducer} from "./reducers";
 import {configureStore} from "@reduxjs/toolkit";
+import {ClientData} from "../models/ClientData";
 
 export type StateType = {
-    courses: Course[];
+    courses: Course[],
+    clientData: ClientData,
 }
+
 const reducer = combineReducers<StateType>({
-    courses: coursesReducer as any
+    courses: coursesReducer as any,
+    clientData: clientDataReducer as any,
 })
-export const store = configureStore({reducer})
+
+export const store = configureStore({reducer});

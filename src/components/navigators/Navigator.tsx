@@ -12,7 +12,7 @@ const Navigator: React.FC<{ items: RouteType[] }> = ({items}) => {
             xs: '10vh', sm: '10vw', md: '10vh'
         }
     }}>
-        {isLaptopOrDesktop ? <NavigatorDesktop items={ROUTES}/> : <NavigatorMobile items={ROUTES}/>}
+        {isLaptopOrDesktop ? <NavigatorDesktop items={items}/> : <NavigatorMobile items={items}/>}
     </Box>
 
 }

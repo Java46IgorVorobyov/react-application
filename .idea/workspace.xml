@@ -4,12 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Homework/#41/addCourseForm/finalCodeSprint4">
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Homework/#42/editCourse">
+      <change afterPath="$PROJECT_DIR$/src/components/dialogs/ActionConfirmation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/ClientData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/ConfirmationData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/LoginData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/AuthService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/useLayout.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navigators/Navigator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Courses.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Logout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/courseData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/courseData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/routes-config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes-config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/RouteType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/RouteType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sprint-4_MUI_CourseFrom" />
+        <entry key="$PROJECT_DIR$" value="sprint-5_CoursesDataGrid" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,6 +81,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/igorvorobev/Documents/FrontEnd TelRan/react-applicationn/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -113,6 +131,10 @@
       <workItem from="1651822673397" duration="19803000" />
       <workItem from="1652254636536" duration="27328000" />
       <workItem from="1652690998994" duration="13000" />
+      <workItem from="1652711764108" duration="6521000" />
+      <workItem from="1652719259153" duration="7018000" />
+      <workItem from="1652773625995" duration="625000" />
+      <workItem from="1652858503918" duration="13050000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -240,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652370933814</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Homework/#42/editCourse">
+      <created>1652713496909</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1652713496909</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +314,8 @@
     <MESSAGE value="Classwork/#41/form" />
     <MESSAGE value="Homework/#41/addCourseForm" />
     <MESSAGE value="Homework/#41/addCourseForm/finalCodeSprint4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework/#41/addCourseForm/finalCodeSprint4" />
+    <MESSAGE value="Homework/#42/editCourse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework/#42/editCourse" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
