@@ -100,7 +100,6 @@ const CourseForm: React.FC<Props> = ({submitFn, courseUpdate}) => {
                                helperText={`enter number of hours in range [${minHours}-${maxHours} ]`}
                                value={course.hours || ''}
                                inputProps={{
-
                                    min: `${minHours}`,
                                    max: `${maxHours}`
                                }}/>
@@ -119,15 +118,12 @@ const CourseForm: React.FC<Props> = ({submitFn, courseUpdate}) => {
                     <TextField required label={'Opening Date'} type={'date'} fullWidth
                                onChange={handlerOpeningDate}
                                value={!!course.openingDate.getFullYear() ?
-                                   getIsoDate(course.openingDate) : ''} inputProps={
-                        {
+                                   getIsoDate(course.openingDate) : ''} inputProps={{
                             min: `${minYear}-01-01`,
                             max: `${maxYear}-12-31`
-                        }
-                    } InputLabelProps={{
+                        }} InputLabelProps={{
                         shrink: true
                     }}/>
-
                 </Grid>
                 <Grid item xs={10} sm={8} md={6}>
                     <Grid container justifyContent={"center"}>
@@ -137,12 +133,8 @@ const CourseForm: React.FC<Props> = ({submitFn, courseUpdate}) => {
                         <Grid item xs={5}>
                             <Button type="reset">Reset</Button>
                         </Grid>
-
                     </Grid>
-
                 </Grid>
-
-
             </Grid>
         </form>
     </Box>

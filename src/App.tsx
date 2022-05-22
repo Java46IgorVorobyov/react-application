@@ -30,6 +30,9 @@ function getRoutes(relevantItems: RouteType[]): React.ReactNode {
 
 function getRelevantItems(clientData: ClientData): RouteType[] {
     //TODO for admin
-    return ROUTES.filter(r => (!!clientData.email && r.authenticated) || (!clientData.email && !r.authenticated));
+    return !!clientData.isAdmin ? ROUTES.filter(route => (!!clientData.email && route.admin && route.authenticated)
+        || (!clientData.email && !route.admin && !route.authenticated))
+        : ROUTES.filter(route => (!!clientData.email && route.user && route.authenticated)
+        || (!clientData.email && !route.user && !route.authenticated));
 }
 

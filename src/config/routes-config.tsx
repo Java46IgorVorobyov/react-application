@@ -21,6 +21,6 @@ export const ROUTES: RouteType[] = [
     {path: STATISTIC_HOURS_PATH, label: 'Statistics Hours', element: <StatisticHours/>, authenticated: true},
     {path: STATISTIC_COST_PATH, label: 'Statistics Cost', element: <StatisticCost/>, authenticated: true},
     {path: LOGIN_PATH, label: 'Login', element: <Login/>},
-    {path: LOGOUT_PATH, label: 'Logout', element: <Logout/>, authenticated: true},
-    {path: GENERATION_PATH, label: 'Generation', element: <Generation/>, authenticated: true}
+    {path: LOGOUT_PATH, label: 'Logout', element: <Logout/>, authenticated: true, user: true, admin: true},
+    {path: GENERATION_PATH, label: 'Generation', element: <Generation/>, authenticated: true, admin: true},
 ]
