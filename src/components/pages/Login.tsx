@@ -1,23 +1,27 @@
-import React, {useState} from "react";
+import React from "react";
 import {useDispatch} from "react-redux";
 import {ClientData} from "../../models/ClientData";
-import {authAction} from "../../redux/actions";
-import AuthServiceClient from "../../service/AuthServiceClient";
-import LoginForm from "../forms/LoginForm";
 import LoginData from "../../models/LoginData";
-import {Alert} from "@mui/material";
-
-const authService = new AuthServiceClient();
+import {authAction} from "../../redux/actions";
+import LoginForm from "../forms/LoginForm";
+import {useNavigate} from "react-router-dom";
+import {COURSES_PATH} from "../../config/routes-config";
+import {authService} from "../../config/service-config";
 
 const Login: React.FC = () => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
-
-    return <LoginForm submitFn={function (loginData: LoginData): void {
+    return <LoginForm submitFn={function (loginData: LoginData): boolean {
         const clientData = authService.login(loginData);
         if (!!clientData) {
             dispatch(authAction(clientData as ClientData));
+            navigate(COURSES_PATH);
+            return true;
         }
+        return false;
     }}/>
 }
+
+
 export default Login;

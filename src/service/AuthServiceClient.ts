@@ -7,10 +7,14 @@ const accounts: any[] = [
     {email: 'admin@gmail.com', password: 'admin1234', role: 'ADMIN'},
 ];
 
-export default class AuthServiceClient implements AuthService{
+export default class AuthServiceClient implements AuthService {
     login(loginData: LoginData): ClientData | boolean {
         const account = accounts.find(a => loginData.email === a.email && loginData.password === a.password);
-        return !!account ? {email: loginData.email, displayName: loginData.email, isAdmin: account.role === 'ADMIN'} : false;
+        return !!account ? {
+            email: loginData.email,
+            displayName: loginData.email,
+            isAdmin: account.role === 'ADMIN'
+        } : false;
     }
 
     logout(): boolean {
