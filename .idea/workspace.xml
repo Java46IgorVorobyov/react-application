@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork/#43/Login">
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Homework/#44/LoginForm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/CourseForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/routes-config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes-config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/RouteType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/RouteType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652713496909</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Homework/#44/LoginForm">
+      <created>1653209691944</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1653209691944</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +305,8 @@
     <MESSAGE value="Homework/#41/addCourseForm" />
     <MESSAGE value="Homework/#41/addCourseForm/finalCodeSprint4" />
     <MESSAGE value="Homework/#42/editCourse" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework/#42/editCourse" />
+    <MESSAGE value="Homework/#44/LoginForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework/#44/LoginForm" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

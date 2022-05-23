@@ -1,16 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import LoginData from "../../models/LoginData";
-import {
-    Box,
-    Button,
-    Container,
-    createTheme,
-    CssBaseline,
-    Link,
-    TextField,
-    ThemeProvider,
-    Typography
-} from "@mui/material";
+import {Box, Button, Container, createTheme, CssBaseline, Link, TextField, ThemeProvider, Typography} from "@mui/material";
+import loginData from "../../models/LoginData";
 
 type Props = {
     submitFn: (loginData: LoginData) => void;
@@ -18,6 +9,7 @@ type Props = {
 
 let inputElement: any;
 let inputPassword: any;
+
 
 function Copyright(props: any) {
     return (
@@ -33,6 +25,7 @@ function Copyright(props: any) {
 }
 
 const LoginForm: React.FC<Props> = ({submitFn}) => {
+
     function onLogin() {
         const loginEmail: string = inputElement.value;
         const loginPassword: string = inputPassword.value;
@@ -41,16 +34,17 @@ const LoginForm: React.FC<Props> = ({submitFn}) => {
     }
 
     React.useEffect(() => {
-        inputElement = document.getElementById('email');
-        inputPassword = document.getElementById('password');
+        inputElement = document.getElementById("email");
+        inputPassword = document.getElementById("password");
     })
+
 
     const theme = createTheme();
     return (
         <ThemeProvider theme={theme}>
             <Container component="main" maxWidth="xs">
                 <CssBaseline/>
-                <Box sx={{marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <Box sx={{marginTop: 8, display: "flex", flexDirection: "column", alignItems: "center"}}>
                     <Typography component="h1" variant="h5">Sign In</Typography>
                     <Box component="form" onSubmit={onLogin} sx={{mt: 1}}>
                         <TextField

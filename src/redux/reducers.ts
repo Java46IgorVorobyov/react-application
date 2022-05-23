@@ -23,6 +23,7 @@ export const coursesReducer: Reducer<Course[], PayloadAction<Course | number>> =
     return coursesService.get();
 }
 
-export const clientDataReducer: Reducer<ClientData, PayloadAction<ClientData>> = (clientData = emptyClientData, action): ClientData => {
+export const clientDataReducer: Reducer<ClientData, PayloadAction<ClientData>> =
+    (clientData = emptyClientData, action): ClientData => {
     return action.type === AUTH_ACTION ? action.payload : clientData;
 }

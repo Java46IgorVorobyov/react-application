@@ -6,6 +6,9 @@ import {Course} from "../../models/Course";
 
 const AddCourse: React.FC = () => {
     const dispatch = useDispatch();
-    return <CourseForm submitFn={(course: Course) => dispatch(addCourse(course))}></CourseForm>
+    function onSubmit(course: Course) {
+        dispatch(addCourse(course));
+    }
+    return <CourseForm submitFn={onSubmit}/>
 }
 export default AddCourse;
