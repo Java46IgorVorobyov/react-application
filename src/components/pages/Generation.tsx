@@ -10,7 +10,7 @@ import {COURSES_PATH} from "../../config/routes-config";
 const INPUT_GENERATION_ID = "input-generation-id"
 let inputElement: any;
 const Generation: React.FC = () => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<any>();
     const navigate = useNavigate();
 
     function onInput() {

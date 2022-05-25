@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Homework/#44/LoginForm/did not alert">
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork/#45 async functionality on AuthServiceArray">
+      <change afterPath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Courses.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Generation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Generation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Logout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/routes-config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes-config.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/service-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/service-config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/RouteType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/RouteType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CoursesService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceArray.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/useImitator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/useImitator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sprint-5_CoursesDataGrid" />
+        <entry key="$PROJECT_DIR$" value="sprint-6_auth_flow" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,7 +125,7 @@
       <workItem from="1652719259153" duration="7018000" />
       <workItem from="1652773625995" duration="625000" />
       <workItem from="1652858503918" duration="13050000" />
-      <workItem from="1653315125362" duration="5420000" />
+      <workItem from="1653315125362" duration="25274000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -273,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653292982335</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Homework/#44/LoginForm/Alert/finalCodeSprint6">
+      <created>1653323635257</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1653323635257</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +329,8 @@
     <MESSAGE value="Homework/#42/editCourse" />
     <MESSAGE value="Homework/#44/LoginForm" />
     <MESSAGE value="Homework/#44/LoginForm/did not alert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework/#44/LoginForm/did not alert" />
+    <MESSAGE value="Homework/#44/LoginForm/Alert/finalCodeSprint6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework/#44/LoginForm/Alert/finalCodeSprint6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
