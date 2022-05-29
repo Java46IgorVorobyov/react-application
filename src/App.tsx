@@ -1,24 +1,32 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import {COURSES_PATH, LOGIN_PATH, ROUTES} from './config/routes-config';
 import Navigator from './components/navigators/Navigator';
-import {ClientData} from "./models/ClientData";
-import {useDispatch, useSelector} from "react-redux";
-import {StateType} from "./redux/store";
-import {RouteType} from "./models/RouteType";
-import {getCourses} from "./redux/actions";
+import {useDispatch, useSelector} from 'react-redux';
+import {StateType} from './redux/store';
+import {ClientData} from './models/ClientData';
+import {RouteType} from './models/RouteType';
+import {coursesService} from './config/service-config';
+import {setCourses} from './redux/actions';
 
 const App: React.FC = () => {
+    const dispatch = useDispatch();
     const clientData: ClientData = useSelector<StateType, ClientData>(state => state.clientData);
     const [flNavigate, setFlNavigate] = React.useState<boolean>(true);
     const relevantItems: RouteType[] = React.useMemo<RouteType[]>(() => getRelevantItems(clientData), [clientData]);
-    const dispatch = useDispatch<any>();
-    dispatch(getCourses());
 
-    React.useEffect(() => setFlNavigate(false), [])
+    //useImitator();
+
+    useEffect(() => {
+        coursesService.get().then(courses => dispatch(setCourses(courses)));
+    });
+
+    React.useEffect(() => setFlNavigate(false), []);
+
     return <BrowserRouter>
         <Navigator items={relevantItems}/>
-        {flNavigate && (clientData.email ? <Navigate to={COURSES_PATH}></Navigate> : <Navigate to={LOGIN_PATH}></Navigate>)}
+        {flNavigate && (clientData.email ? <Navigate to={COURSES_PATH}></Navigate> :
+            <Navigate to={LOGIN_PATH}></Navigate>)}
         <Routes>
             {getRoutes(relevantItems)}
         </Routes>
@@ -33,8 +41,6 @@ function getRoutes(relevantItems: RouteType[]): React.ReactNode {
 
 function getRelevantItems(clientData: ClientData): RouteType[] {
     //TODO for admin
-    return ROUTES.filter(r => (!!clientData.email && r.authenticated)
-        || (!clientData.email && !r.authenticated && !r.administrator)
-        || (clientData.isAdmin && r.administrator));
+    return ROUTES.filter(r => (!!clientData.email && r.authenticated) ||
+        (!clientData.email && !r.authenticated && !r.administrator) || (clientData.isAdmin && r.administrator))
 }
-

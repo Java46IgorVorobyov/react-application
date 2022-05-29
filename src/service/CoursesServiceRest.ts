@@ -1,63 +1,50 @@
-import CoursesService from "./CoursesService";
 import {Course} from "../models/Course";
+import CoursesService from "./CoursesService";
+import {AUTH_TOKEN_ITEM} from "./AuthServiceJwt";
 
-export default class CoursesServiceRest implements CoursesService{
-    constructor(private url: any) {
+function getHeaders(): any {
+    return {Authorization: "Bearer " + localStorage.getItem(AUTH_TOKEN_ITEM),
+    "Content-Type": "application/json"};
+}
+
+export default class CoursesServiceRest implements CoursesService {
+    constructor(private url: string) {
+        console.log(url)
     }
 
     async add(course: Course): Promise<void> {
-        const response = await fetch(this.url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+        (course as any).userId = 1;
+        await fetch(this.url, {
+            method: "POST",
+            headers: getHeaders(),
             body: JSON.stringify(course)
-        })
-        return await response.json();
-    }
-
-    async remove(id: number): Promise<void> {
-        await fetch(this.getUrlById(id), {
-            method: 'DELETE'
-        })
-    }
-
-    async update(id: number, course: Course): Promise<void> {
-        const response = await fetch(this.getUrlById(id), {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(course)
-        })
-        return await response.json();
-    }
-
-    async get(): Promise<Course[]> {
-        const response = await fetch(this.url);
-        const course = await response.json();
-        return course.map((courses: Course) => {
-            courses.openingDate = new Date(courses.openingDate);
-            return courses;
         });
     }
 
-    async exists(id: number): Promise<boolean> {
-        let result;
-        try {
-            await fetch(this.getUrlById(id));
-            result = true;
-        } catch (err) {
-            console.log(err);
-            result = false;
-        }
-        return result;
+    async remove(id: number): Promise<void> {
+        await fetch(this.getUrlId(id), {
+            method: "DELETE",
+            headers: getHeaders()
+        })
     }
 
-    private getUrlById(id: number) {
+    private getUrlId(id: number): RequestInfo {
         return `${this.url}/${id}`;
     }
-}
 
-export class getCourses {
+    async update(id: number, course: Course): Promise<void> {
+        await fetch(this.getUrlId(id), {
+            method: "PUT",
+            headers: getHeaders(),
+            body: JSON.stringify(course)
+        })
+    }
+
+     async get(): Promise<Course[]> {
+        const request = await fetch(this.url, {
+            headers: getHeaders()
+        });
+        return await request.json().then((courses: Course[]) => courses.map(c =>
+            ({...c, openingDate: new Date(c.openingDate)})));
+    }
 }

@@ -1,11 +1,6 @@
-import CoursesServiceArray from "../service/CoursesServiceArray";
 import AuthServiceClient from "../service/AuthServiceClient";
 import CoursesServiceRest from "../service/CoursesServiceRest";
+import AuthServiceJwt from "../service/AuthServiceJwt";
 
-export const coursesService = new CoursesServiceArray();
-
-export const authService = new AuthServiceClient();
-
-export const URL = 'http://localhost:3500/courses';
-
-export const courseProvider = new CoursesServiceRest(URL);
+export const coursesService = new CoursesServiceRest('http://localhost:3500/courses');
+export const authService = new AuthServiceJwt('http://localhost:3500/login');

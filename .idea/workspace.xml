@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork/#45 async functionality on AuthServiceArray">
-      <change afterPath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="HomeWork#45/REST">
+      <change afterPath="$PROJECT_DIR$/src/service/AuthServiceJwt.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AddCourse.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Courses.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Courses.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Generation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Generation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Logout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/service-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/service-config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CoursesService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceArray.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceArray.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/useImitator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/useImitator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AuthService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +126,10 @@
       <workItem from="1652719259153" duration="7018000" />
       <workItem from="1652773625995" duration="625000" />
       <workItem from="1652858503918" duration="13050000" />
-      <workItem from="1653315125362" duration="25274000" />
+      <workItem from="1653315125362" duration="27543000" />
+      <workItem from="1653575492483" duration="10740000" />
+      <workItem from="1653629760717" duration="1477000" />
+      <workItem from="1653805597544" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -281,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653323635257</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="HomeWork#45/REST">
+      <created>1653491201336</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1653491201337</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +341,8 @@
     <MESSAGE value="Homework/#44/LoginForm" />
     <MESSAGE value="Homework/#44/LoginForm/did not alert" />
     <MESSAGE value="Homework/#44/LoginForm/Alert/finalCodeSprint6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework/#44/LoginForm/Alert/finalCodeSprint6" />
+    <MESSAGE value="HomeWork#45/REST" />
+    <option name="LAST_COMMIT_MESSAGE" value="HomeWork#45/REST" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
