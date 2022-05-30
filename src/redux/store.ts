@@ -15,3 +15,4 @@ const reducer = combineReducers<StateType>({
 })
 
 export const store = configureStore({reducer});
+export const coursesSelector = (state: StateType): Course[] => state.courses;

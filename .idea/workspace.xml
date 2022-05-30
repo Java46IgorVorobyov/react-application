@@ -4,20 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="HomeWork#45/REST">
-      <change afterPath="$PROJECT_DIR$/src/service/AuthServiceJwt.ts" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="ClassWork#46/REST server login">
+      <change afterPath="$PROJECT_DIR$/src/components/statistics/Statistics.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Distribution.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Logout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/service-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/service-config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AuthService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/StatisticsHours.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/StatisticsHours.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/courseData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/courseData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/functions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +35,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -130,6 +127,7 @@
       <workItem from="1653575492483" duration="10740000" />
       <workItem from="1653629760717" duration="1477000" />
       <workItem from="1653805597544" duration="340000" />
+      <workItem from="1653922203615" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -309,7 +307,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/homework35" />
+                        <option value="origin/sprint-7_integration_rest_server" />
                       </list>
                     </value>
                   </entry>
