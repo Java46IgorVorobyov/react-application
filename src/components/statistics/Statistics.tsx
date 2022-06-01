@@ -14,7 +14,7 @@ type Props = {
 
 function getStatisticsColumns(unit: string): GridColumns {
     const columns: GridColumns = [
-        {field: 'min', headerName: `FROM (${unit}) `, flex: 1, headerAlign: 'center', align: 'center'},
+        {field: 'min', headerName: `FROM (${unit})`, flex: 1, headerAlign: 'center', align: 'center'},
         {field: 'max', headerName: `TO (${unit})`, flex: 1, headerAlign: 'center', align: 'center'},
         {field: 'amount', headerName: `Amount`, flex: 1, headerAlign: 'center', align: 'center'}
     ]
@@ -29,18 +29,15 @@ function getRows(distribution: Distribution): any[] {
 
 const Statistics: React.FC<Props> = ({field, title, unit, intervals, objects}) => {
     const columns = React.useMemo(() => getStatisticsColumns(unit), [unit]);
-
     const [interval, setInterval] = React.useState(intervals[0]);
     const flShow = React.useRef<boolean>(true);
     const [rows, setRows] = React.useState<any[]>([]);
 
     function showStatistics() {
-
         flShow.current = false;
         const distribution: Distribution = getStatistics(field, interval, objects);
 
         setRows(getRows(distribution));
-
     }
 
     function intervalChange(event: any) {

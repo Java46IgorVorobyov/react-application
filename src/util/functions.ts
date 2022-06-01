@@ -33,7 +33,7 @@ export function getRouteIndex(items: RouteType[], pathname: string): number {
 }
 export function getStatistics(field: string, interval: number, array: any[]): Distribution {
     if (array.length === 0) {
-        throw "empty array "
+        throw "empty array"
     }
     if (typeof array[0][field] !== 'number') {
         throw `field ${field} doesn't exist or no number`

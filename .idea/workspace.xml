@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="ClassWork#46/REST server login">
-      <change afterPath="$PROJECT_DIR$/src/components/statistics/Statistics.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Distribution.ts" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="HomeWork#46/Statistics cost&amp;hours">
+      <change afterPath="$PROJECT_DIR$/src/models/OperationCode.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/StatisticCost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/StatisticsHours.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/StatisticsHours.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/courseData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/courseData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/statistics/Statistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/statistics/Statistics.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/functions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +128,8 @@
       <workItem from="1653575492483" duration="10740000" />
       <workItem from="1653629760717" duration="1477000" />
       <workItem from="1653805597544" duration="340000" />
-      <workItem from="1653922203615" duration="1066000" />
+      <workItem from="1653922203615" duration="9644000" />
+      <workItem from="1654066714497" duration="348000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -290,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653491201337</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="HomeWork#46/Statistics cost&amp;hours">
+      <created>1653923404546</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1653923404546</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +349,8 @@
     <MESSAGE value="Homework/#44/LoginForm/did not alert" />
     <MESSAGE value="Homework/#44/LoginForm/Alert/finalCodeSprint6" />
     <MESSAGE value="HomeWork#45/REST" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeWork#45/REST" />
+    <MESSAGE value="HomeWork#46/Statistics cost&amp;hours" />
+    <option name="LAST_COMMIT_MESSAGE" value="HomeWork#46/Statistics cost&amp;hours" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

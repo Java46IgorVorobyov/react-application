@@ -2,27 +2,41 @@ import React, {useEffect} from 'react';
 import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import {COURSES_PATH, LOGIN_PATH, LOGOUT_PATH, ROUTES} from './config/routes-config';
 import Navigator from './components/navigators/Navigator';
-import {useImitator} from './util/useImitator';
 import {useDispatch, useSelector} from 'react-redux';
 import {StateType} from './redux/store';
-import {Course} from './models/Course';
-import {ClientData} from './models/ClientData';
+import {ClientData, emptyClientData} from './models/ClientData';
 import {RouteType} from './models/RouteType';
 import {coursesService} from './config/service-config';
-import {setCourses} from './redux/actions';
+import {AUTH_ACTION, authAction, setCourses, setOperationCode} from './redux/actions';
+import {OperationCode} from "./models/OperationCode";
+import {CLIENT_DATA_ITEM} from "./redux/reducers";
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
     const clientData: ClientData = useSelector<StateType, ClientData>(state => state.clientData);
+    const operationCode: OperationCode = useSelector<StateType, OperationCode>(state => state.operationCode);
+    const operationCodeCallback = React.useCallback(operationCodeHandler, [operationCode]);
+
     //useImitator();
     useEffect(() => {
-        coursesService.get().then(courses => dispatch(setCourses(courses)))
-    }, [])
+        coursesService.get().then(courses => {
+            dispatch(setCourses(courses));
+            dispatch(setOperationCode(OperationCode.OK));
+        }).catch(err => dispatch(setOperationCode(err)));
+    }, [operationCode, clientData]);
 
     const [flNavigate, setFlNavigate] = React.useState<boolean>(true);
     const relevantItems: RouteType[] = React.useMemo<RouteType[]>(() => getRelevantItems(clientData), [clientData]);
 
-    React.useEffect(() => setFlNavigate(false), [])
+    React.useEffect(() => setFlNavigate(false), []);
+
+    function operationCodeHandler() {
+        if (operationCode === OperationCode.AUTH_ERROR) {
+            dispatch(authAction(emptyClientData));
+        }
+        //TODO
+    }
+    operationCodeCallback();
 
     return <BrowserRouter>
         <Navigator items={relevantItems}/>

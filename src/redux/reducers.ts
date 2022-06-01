@@ -1,8 +1,9 @@
 import {Reducer} from "react";
 import {Course} from "../models/Course";
 import {PayloadAction} from "@reduxjs/toolkit";
-import {AUTH_ACTION, SET_COURSES_ACTION} from "./actions";
+import {AUTH_ACTION, OPERATION_CODE_ACTION, SET_COURSES_ACTION} from "./actions";
 import {ClientData, emptyClientData} from "../models/ClientData";
+import {OperationCode} from "../models/OperationCode";
 
 export const CLIENT_DATA_ITEM = 'client-data';
 
@@ -19,4 +20,12 @@ export const clientDataReducer: Reducer<ClientData, PayloadAction<ClientData>> =
             return action.payload;
         }
         return clientData;
+    }
+
+export const operationCodeReducer: Reducer<OperationCode, PayloadAction<OperationCode>> =
+    (operationCode = OperationCode.OK, action): OperationCode => {
+        if (action.type === OPERATION_CODE_ACTION) {
+            return action.payload;
+        }
+        return operationCode;
     }
