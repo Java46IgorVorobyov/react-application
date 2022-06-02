@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="HomeWork#46/Statistics cost&amp;hours">
-      <change afterPath="$PROJECT_DIR$/src/models/OperationCode.ts" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="Classwork#47/Alert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/statistics/Statistics.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/statistics/Statistics.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/functions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +123,9 @@
       <workItem from="1653629760717" duration="1477000" />
       <workItem from="1653805597544" duration="340000" />
       <workItem from="1653922203615" duration="9644000" />
-      <workItem from="1654066714497" duration="348000" />
+      <workItem from="1654066714497" duration="979000" />
+      <workItem from="1654096445001" duration="2423000" />
+      <workItem from="1654181035691" duration="1220000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -299,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653923404546</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Classwork#47/Alert">
+      <created>1654067180604</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1654067180604</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +353,8 @@
     <MESSAGE value="Homework/#44/LoginForm/Alert/finalCodeSprint6" />
     <MESSAGE value="HomeWork#45/REST" />
     <MESSAGE value="HomeWork#46/Statistics cost&amp;hours" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeWork#46/Statistics cost&amp;hours" />
+    <MESSAGE value="Classwork#47/Alert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Classwork#47/Alert" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

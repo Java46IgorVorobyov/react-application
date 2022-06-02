@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {ClientData} from "../../models/ClientData";
 import LoginData from "../../models/LoginData";
@@ -10,6 +10,7 @@ import {authService} from "../../config/service-config";
 import {OperationCode} from "../../models/OperationCode";
 
 const Login: React.FC = () => {
+    const [isServerAvailable, setIsServerAvailable] = useState(true);
     const navigate = useNavigate();
     const dispatch = useDispatch();
 

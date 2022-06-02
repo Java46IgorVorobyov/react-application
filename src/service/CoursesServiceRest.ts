@@ -10,7 +10,7 @@ function getHeaders(): any {
     };
 }
 
-async function responceProcessing(response: Response): Promise<any> {
+async function responseProcessing(response: Response): Promise<any> {
     if (response.status < 400) {
         return await response.json();
     }
@@ -37,7 +37,7 @@ export default class CoursesServiceRest implements CoursesService {
         } catch (err) {
             throw OperationCode.SERVER_UNAVAILABLE;
         }
-        await responceProcessing(response);
+        await responseProcessing(response);
     }
 
     async remove(id: number): Promise<void> {
@@ -50,7 +50,7 @@ export default class CoursesServiceRest implements CoursesService {
         } catch (err) {
             throw OperationCode.SERVER_UNAVAILABLE;
         }
-        await responceProcessing(response);
+        await responseProcessing(response);
     }
 
     private getUrlId(id: number): RequestInfo {
@@ -68,16 +68,19 @@ export default class CoursesServiceRest implements CoursesService {
         } catch (err) {
             throw OperationCode.SERVER_UNAVAILABLE;
         }
-        await responceProcessing(response);
+        await responseProcessing(response);
     }
 
     async get(): Promise<Course[]> {
         let response: Response;
-        response = await fetch(this.url, {
-            headers: getHeaders()
-        });
-        const courses: Course[] = await responceProcessing(response);
-
-        return courses.map(c => ({...c, openingDate: new Date(c.openingDate)}))
+        try {
+            response = await fetch(this.url, {
+                headers: getHeaders()
+            });
+        } catch (err) {
+            throw OperationCode.SERVER_UNAVAILABLE;
+        }
+        const courses: Course[] = await responseProcessing(response);
+        return courses.map(c => ({...c, openingDate: new Date(c.openingDate)}));
     }
 }

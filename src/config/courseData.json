@@ -24,6 +24,7 @@
   "maxYear": 2022,
   "minId": 100000,
   "maxId": 999999,
+  "retryPeriod": 3000,
   "hoursInterval": 20,
   "costInterval": 2000,
   "portrait": [
