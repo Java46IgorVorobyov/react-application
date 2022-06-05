@@ -1,6 +1,8 @@
 import { Course } from "../models/Course";
 import { getRandomNumber } from "../util/random";
 import CoursesService from "./CoursesService";
+import {Observable, of} from "rxjs";
+import {OperationCode} from "../models/OperationCode";
 export default class CoursesServiceArray implements CoursesService {
     courses: Course[] = []
     async add(course: Course): Promise<void> {
@@ -29,5 +31,8 @@ export default class CoursesServiceArray implements CoursesService {
     async get(): Promise<Course[]> {
         return this.courses.slice();
     }
-    
+
+    getObservableData(): Observable<Course[]> | OperationCode {
+        return of(this.courses);
+    }
 }

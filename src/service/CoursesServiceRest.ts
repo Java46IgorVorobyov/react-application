@@ -2,6 +2,7 @@ import {Course} from "../models/Course";
 import CoursesService from "./CoursesService";
 import {AUTH_TOKEN_ITEM} from "./AuthServiceJwt";
 import {OperationCode} from "../models/OperationCode";
+import {Observable, Subscriber} from "rxjs";
 
 function getHeaders(): any {
     return {
@@ -9,6 +10,8 @@ function getHeaders(): any {
         "Content-Type": "application/json"
     };
 }
+
+const POLLING_INTERVAL = 20;
 
 async function responseProcessing(response: Response): Promise<any> {
     if (response.status < 400) {
@@ -21,8 +24,37 @@ async function responseProcessing(response: Response): Promise<any> {
 }
 
 export default class CoursesServiceRest implements CoursesService {
+    private observable: Observable<Course[] | OperationCode> | undefined;
+    private observer: Subscriber<Course[] | OperationCode> | undefined;
+
     constructor(private url: string) {
         console.log(url)
+    }
+
+    private observing() {
+        this.get().then(courses => this.observer?.next(courses))
+            .catch(err => {
+                if (err === OperationCode.UNKNOWN) {
+                    this.observer?.next(OperationCode.UNKNOWN);
+                    this.observer?.complete();
+                } else {
+                    this.observer?.next(err)
+                }
+            });
+    }
+
+    // @ts-ignore
+    getObservableData(): Observable<Course[] | OperationCode> {
+        if (!this.observable || this.observer!.closed) {
+            this.observable = new Observable(observer => {
+                let intervalId: any;
+                this.observer = observer;
+                this.observing();
+                intervalId = setInterval(this.observing.bind(this), POLLING_INTERVAL);
+                return () => clearInterval(intervalId);
+            })
+        }
+        return this.observable;
     }
 
     async add(course: Course): Promise<void> {

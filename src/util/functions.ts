@@ -43,6 +43,6 @@ export function getStatistics(field: string, interval: number, array: any[]): Di
         const intervalNumber: number = +e[0];
         const min: number = intervalNumber * interval;
         const max: number = min + interval - 1;
-        return { min, max, amount: +e[1] }
+        return { min, max, amount: +e[1]};
     })
 }

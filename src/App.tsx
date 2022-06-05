@@ -9,11 +9,12 @@ import {RouteType} from './models/RouteType';
 import {coursesService} from './config/service-config';
 import {authAction, setCourses, setOperationCode} from './redux/actions';
 import {OperationCode} from './models/OperationCode';
-import {Box, Alert, LinearProgress} from '@mui/material';
+import {Alert, Box, LinearProgress} from '@mui/material';
 import courseData from './config/courseData.json'
+import {Course} from "./models/Course";
 
 const SERVER_UNAVAILABLE_MESSAGE = `server is unavailable;
-  waiting for retry period ${(courseData as any).retryPeriod / 1000} seconds `
+  waiting for retry`
 const UNKNOWN_ERROR_MESSAGE = `unknown error; contact the application staff courses.admin@tel-ran.com`
 
 const App: React.FC = () => {
@@ -38,14 +39,12 @@ const App: React.FC = () => {
     const intervalId = useRef<any>();
 
     function operationCodeHandler() {
-        clearInterval(intervalId.current);
         if (operationCode === OperationCode.AUTH_ERROR) {
             dispatch(authAction(emptyClientData));
         } else if (operationCode === OperationCode.SERVER_UNAVAILABLE) {
             setAlert(true);
             flUnknown.current = false;
             alertMessage.current = SERVER_UNAVAILABLE_MESSAGE;
-            intervalId.current = setInterval(getData, (courseData as any).retryPeriod, dispatch);
         } else if (operationCode === OperationCode.UNKNOWN) {
             setAlert(true);
             flUnknown.current = true;
@@ -80,10 +79,21 @@ const App: React.FC = () => {
 export default App;
 
 function getData(dispatch: any) {
-    coursesService.get().then(courses => {
-        dispatch(setCourses(courses));
-        dispatch(setOperationCode(OperationCode.OK));
-    }).catch(err => dispatch(setOperationCode(err)));
+    // coursesService.get().then(courses => {
+    //     dispatch(setCourses(courses));
+    //     dispatch(setOperationCode(OperationCode.OK));
+    // }).catch(err => dispatch(setOperationCode(err)));
+
+    coursesService.getObservableData().subscribe({
+        next: courses_err => {
+            if (Array.isArray(courses_err)) {
+                dispatch(setCourses(courses_err as Course[]));
+                dispatch(setOperationCode(OperationCode.OK));
+            } else {
+                dispatch(setOperationCode(courses_err as OperationCode));
+            }
+        }
+    })
 }
 
 function getRoutes(relevantItems: RouteType[], clientData: ClientData): React.ReactNode {
