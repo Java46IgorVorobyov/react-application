@@ -12,6 +12,7 @@ function getHeaders(): any {
 }
 
 const POLLING_INTERVAL = 20000;
+let intervalId: any;
 
 async function responseProcessing(response: Response): Promise<any> {
     if (response.status < 400) {
@@ -53,15 +54,19 @@ export default class CoursesServiceRest implements CoursesService {
 
     // @ts-ignore
     getObservableData(): Observable<Course[] | OperationCode> {
-        if (!this.observable || this.observer!.closed) {
+        if (!this.observable) {
             this.observable = new Observable(observer => {
-                let intervalId: any;
                 this.observer = observer;
                 this.observing();
-
+                if (intervalId) {
+                    clearInterval(intervalId);
+                }
                 intervalId = setInterval(this.observing.bind(this), POLLING_INTERVAL);
-                return () => clearInterval(intervalId);
-
+                console.log(intervalId);
+                return () => {
+                    console.log('Clearing Interval', intervalId);
+                    clearInterval(intervalId);
+                };
             })
         }
         return this.observable;

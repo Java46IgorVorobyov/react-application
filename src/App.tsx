@@ -30,7 +30,7 @@ const App: React.FC = () => {
 
     useEffect(() => {
         getData(dispatch);
-    }, [operationCode, clientData, dispatch]);
+    }, []);
 
     const [flNavigate, setFlNavigate] = React.useState<boolean>(true);
     const relevantItems: RouteType[] = React.useMemo<RouteType[]>(() => getRelevantItems(clientData), [clientData])
