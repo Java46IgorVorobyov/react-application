@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import {COURSES_PATH, LOGIN_PATH, LOGOUT_PATH, ROUTES} from './config/routes-config';
 import Navigator from './components/navigators/Navigator';
+import {useImitator} from './util/useImitator';
 import {useDispatch, useSelector} from 'react-redux';
 import {StateType} from './redux/store';
 import {ClientData, emptyClientData} from './models/ClientData';
@@ -9,52 +10,59 @@ import {RouteType} from './models/RouteType';
 import {coursesService} from './config/service-config';
 import {authAction, setCourses, setOperationCode} from './redux/actions';
 import {OperationCode} from './models/OperationCode';
-import {Alert, Box, LinearProgress} from '@mui/material';
+import {Box, Alert, LinearProgress} from '@mui/material';
 import courseData from './config/courseData.json'
-import {Course} from "./models/Course";
+import {Course} from './models/Course';
+import {Subscription} from 'rxjs';
 
 const SERVER_UNAVAILABLE_MESSAGE = `server is unavailable;
-  waiting for retry`
+  waiting for retry  `
 const UNKNOWN_ERROR_MESSAGE = `unknown error; contact the application staff courses.admin@tel-ran.com`
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
     const [flAlert, setAlert] = React.useState(false);
-    const flUnknown = React.useRef(false);
+    const [flUnknown, setFlUnknown] = React.useState(false);
     const alertMessage = React.useRef('');
 
 
     const clientData: ClientData = useSelector<StateType, ClientData>(state => state.clientData);
     const operationCode: OperationCode = useSelector<StateType, OperationCode>(state => state.operationCode);
     //useImitator();
-
     useEffect(() => {
-        getData(dispatch);
-    }, []);
+        const subscription = getData(dispatch);
+        return () => subscription.unsubscribe();
+    }, [clientData])
 
+    const flSignIn = React.useRef<boolean>(false);
     const [flNavigate, setFlNavigate] = React.useState<boolean>(true);
     const relevantItems: RouteType[] = React.useMemo<RouteType[]>(() => getRelevantItems(clientData), [clientData])
-
     React.useEffect(() => setFlNavigate(false), [])
-    const intervalId = useRef<any>();
 
     function operationCodeHandler() {
+        console.log("operation code", operationCode)
         if (operationCode === OperationCode.AUTH_ERROR) {
+            if (flSignIn.current) {
+                dispatch(setOperationCode(OperationCode.UNKNOWN));
+                return;
+            }
+            flSignIn.current = true;
+            setTimeout(() => flSignIn.current = false, 20000)
             dispatch(authAction(emptyClientData));
         } else if (operationCode === OperationCode.SERVER_UNAVAILABLE) {
             setAlert(true);
-            flUnknown.current = false;
+            setFlUnknown(false);
             alertMessage.current = SERVER_UNAVAILABLE_MESSAGE;
         } else if (operationCode === OperationCode.UNKNOWN) {
             setAlert(true);
-            flUnknown.current = true;
+            setFlUnknown(true);
             alertMessage.current = UNKNOWN_ERROR_MESSAGE;
         } else {
             setAlert(false);
         }
     }
 
-    const operationCodeCallback = React.useCallback(operationCodeHandler, [dispatch, operationCode]);
+    const operationCodeCallback = React.useCallback(operationCodeHandler, [operationCode]);
     React.useEffect(() => {
         operationCodeCallback();
     }, [operationCodeCallback])
@@ -64,7 +72,7 @@ const App: React.FC = () => {
             <Alert severity='error'>
                 {alertMessage.current}
             </Alert>
-            {!flUnknown.current && <LinearProgress/>}
+            {!flUnknown && <LinearProgress/>}
         </Box> : <BrowserRouter>
             <Navigator items={relevantItems}/>
             {flNavigate && (clientData.email ? <Navigate to={COURSES_PATH}></Navigate> :
@@ -74,23 +82,21 @@ const App: React.FC = () => {
             </Routes>
         </BrowserRouter>}
     </Box>
+
+
 }
 
 export default App;
 
-function getData(dispatch: any) {
-    // coursesService.get().then(courses => {
-    //     dispatch(setCourses(courses));
-    //     dispatch(setOperationCode(OperationCode.OK));
-    // }).catch(err => dispatch(setOperationCode(err)));
-
-    coursesService.getObservableData().subscribe({
+function getData(dispatch: any): Subscription {
+    return  coursesService.getObservableData().subscribe({
         next: courses_err => {
             if (Array.isArray(courses_err)) {
                 dispatch(setCourses(courses_err as Course[]));
                 dispatch(setOperationCode(OperationCode.OK));
             } else {
-                dispatch(setOperationCode(courses_err as OperationCode));
+                console.log("getting operation code", courses_err)
+                dispatch(setOperationCode(courses_err as OperationCode))
             }
         }
     })

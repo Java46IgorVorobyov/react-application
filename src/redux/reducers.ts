@@ -8,7 +8,7 @@ import {OperationCode} from "../models/OperationCode";
 export const CLIENT_DATA_ITEM = 'client-data';
 
 export const coursesReducer: Reducer<Course[], PayloadAction<Course[]>> = (courses = [], action): Course[] => {
-    return action.type === SET_COURSES_ACTION ? action.payload : courses;
+    return action.type === SET_COURSES_ACTION && action.payload.length > 0 ? action.payload : courses;
 }
 
 export const clientDataReducer: Reducer<ClientData, PayloadAction<ClientData>> =
