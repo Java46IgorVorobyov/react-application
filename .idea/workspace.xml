@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="HomeWork#48/RXJS Observable">
-      <change afterPath="$PROJECT_DIR$/RulesFirestore.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/firebase-config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/CoursesServiceFirebase.ts" afterDir="false" />
+    <list default="true" id="f96eb671-4e14-4105-824b-cd25c433fd0a" name="Changes" comment="HomeWork#49/with unsubscribe">
+      <change afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/icons/google.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/AuthServiceFirebase.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/forms/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/service-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/service-config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AuthService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthServiceClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AuthServiceJwt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AuthServiceJwt.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CoursesServiceRest.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +140,9 @@
       <workItem from="1654421516744" duration="236000" />
       <workItem from="1654525626350" duration="22000" />
       <workItem from="1654525692650" duration="11847000" />
-      <workItem from="1654785351130" duration="4012000" />
+      <workItem from="1654785351130" duration="10627000" />
+      <workItem from="1655195858223" duration="835000" />
+      <workItem from="1655360359690" duration="4536000" />
     </task>
     <task id="LOCAL-00001" summary="Classwork 34">
       <created>1649236376449</created>
@@ -341,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654530446976</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="HomeWork#49/with unsubscribe">
+      <created>1654789899767</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1654789899767</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +409,8 @@
     <MESSAGE value="HomeWork#47/solution exceptions handling flows" />
     <MESSAGE value="ClassWork#48/RXJS Observable" />
     <MESSAGE value="HomeWork#48/RXJS Observable" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeWork#48/RXJS Observable" />
+    <MESSAGE value="HomeWork#49/with unsubscribe" />
+    <option name="LAST_COMMIT_MESSAGE" value="HomeWork#49/with unsubscribe" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

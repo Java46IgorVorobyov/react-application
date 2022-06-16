@@ -23,6 +23,10 @@ export default class AuthServiceJwt implements AuthService {
     async logout(): Promise<boolean> {
         return true;
     }
+
+    providers(): { name: string; icon: string }[] {
+        return [];
+    }
 }
 
 async function getClientData(response: Response): Promise<ClientData> {

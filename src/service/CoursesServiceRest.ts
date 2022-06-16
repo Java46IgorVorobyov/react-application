@@ -12,7 +12,9 @@ function getHeaders(): any {
 }
 
 const POLLING_INTERVAL = 20000;
-const UNAVAIABILITY_TIMEOUT = 50000;
+const UNAVAILABILITY_TIMEOUT = 50000;
+let timeoutId: any;
+let intervalId: any;
 
 async function responseProcessing(response: Response): Promise<any> {
     if (response.status < 400) {
@@ -24,8 +26,7 @@ async function responseProcessing(response: Response): Promise<any> {
     throw OperationCode.UNKNOWN
 }
 
-let timeoutId: any;
-let intervalId: any;
+
 export default class CoursesServiceRest implements CoursesService {
     private observable: Observable<Course[] | OperationCode> | undefined;
     private observer: Subscriber<Course[] | OperationCode> | undefined;
@@ -51,14 +52,14 @@ export default class CoursesServiceRest implements CoursesService {
 
         })
             .catch(err => {
-                if (err == OperationCode.UNKNOWN) {
+                if (err === OperationCode.UNKNOWN) {
                     this.closeObserver();
                 } else {
                     this.coursesJson = '';
                     if (err === OperationCode.SERVER_UNAVAILABLE) {
                         if (!timeoutId) {
 
-                            timeoutId = setTimeout(this.closeObserver.bind(this), UNAVAIABILITY_TIMEOUT);
+                            timeoutId = setTimeout(this.closeObserver.bind(this), UNAVAILABILITY_TIMEOUT);
                             console.log("setting timeout", timeoutId)
                         } else {
                             return;

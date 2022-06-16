@@ -20,4 +20,8 @@ export default class AuthServiceClient implements AuthService {
     async logout(): Promise<boolean> {
         return true;
     }
+
+    providers(): { name: string; icon: string }[] {
+        return [];
+    }
 }

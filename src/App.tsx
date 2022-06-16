@@ -89,7 +89,7 @@ const App: React.FC = () => {
 export default App;
 
 function getData(dispatch: any): Subscription {
-    return  coursesService.getObservableData().subscribe({
+    return coursesService.getObservableData().subscribe({
         next: courses_err => {
             if (Array.isArray(courses_err)) {
                 dispatch(setCourses(courses_err as Course[]));

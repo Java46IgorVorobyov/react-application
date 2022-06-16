@@ -10,10 +10,12 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import LoginData from '../../models/LoginData';
-import {Alert} from "@mui/material";
+import {Alert, useMediaQuery} from "@mui/material";
+import {authService} from "../../config/service-config";
 
 type Props = {
-    submitFn: (loginData: LoginData) => Promise<boolean>
+    submitFn: (loginData: LoginData) => Promise<boolean>,
+    closeAlert: () => void
 }
 
 function Copyright(props: any) {
@@ -31,48 +33,54 @@ function Copyright(props: any) {
 
 const theme = createTheme();
 
-export default function LoginForm({submitFn}: Props) {
-    const [flAlert, setAlert] = React.useState<boolean>(false);
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+const LoginForm: React.FC<Props> = ({submitFn, closeAlert}) => {
+    const isLaptopOrDesktop = useMediaQuery('(min-width: 900px)');
+    const isMobileOrTablet = useMediaQuery('(min-width: 600px)');
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
         const data = new FormData(event.currentTarget);
-        const loginData = {email: data.get('email') as string, password: data.get('password') as string};
-
-        console.log(loginData);
-
-        if(!await submitFn(loginData)) {
-            setAlert(true);
-        }
+        const email:string = data.get('email') as string;
+        const password:string = data.get('password') as string;
+        submitFn({email: email, password: password});
     };
-
+    function getProviders(providers: {name: string, icon: string}[]): React.ReactNode {
+        return providers.map(p => <Button key={p.icon}
+                                          onClick={()=> submitFn({email: "", password: p.name })}>
+            <img src = {p.icon} style={{width:"50px", height:"50px"}} alt = {p.name} />
+        </Button>)
+    }
     return (
         <ThemeProvider theme={theme}>
-            <Container component="main" maxWidth="xs">
-                <CssBaseline/>
+            <Container component="main" maxWidth="xs" onFocus={closeAlert}>
+                <CssBaseline />
                 <Box
                     sx={{
-                        mt: {xs: 15, sm: 1, md: 15},
+                        mt: {xs: 8, sm: 0, md: 8},
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                    }}>
-                    {flAlert && <Alert onClose={() => setAlert(false)} severity="error"
-                                       sx={{width: "50vw", mb: {xs: 5, sm: 1, md: 5}}}>Wrong Credentials</Alert>}
-                    <Avatar sx={{bgcolor: 'secondary.main'}}>
-                        <LockOutlinedIcon/>
+                    }}
+                >
+                    <Avatar sx={{ m: {xs: 1, sm: 0, md: 1}, bgcolor: 'secondary.main' }}>
+                        <LockOutlinedIcon />
                     </Avatar>
-                    <Box component="form" onSubmit={handleSubmit} sx={{mt: {xs: 8, sm: 2, md: 10}}}>
+                    <Typography component="h1" variant="h5">
+                        Login
+                    </Typography>
+                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: {xs: 1, sm: 0, md: 1}}}>
                         <TextField
+                            margin="normal"
                             required
                             fullWidth
                             id="email"
                             label="Email Address"
                             name="email"
+                            autoComplete="email"
                             autoFocus
+                            sx={{ mt: {sm: 0, md: 1}}}
+                            size={isMobileOrTablet && !isLaptopOrDesktop ? 'small' : 'medium'}
                         />
                         <TextField
-                            sx={{mt: {xs: 5, sm: 2, md: 5}}}
                             margin="normal"
                             required
                             fullWidth
@@ -80,19 +88,21 @@ export default function LoginForm({submitFn}: Props) {
                             label="Password"
                             type="password"
                             id="password"
+                            autoComplete="current-password"
+                            sx={{ mt: {sm: 0, md: 1}}}
+                            size={isMobileOrTablet && !isLaptopOrDesktop ? 'small' : 'medium'}
                         />
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            sx={{mt: {xs: 5, sm: 2, md: 5}}}
-                        >
-                            Sign In
+                        <Button type="submit" fullWidth variant="contained" sx={{ mt: {xs: 3, sm: 0, md: 3}, mb: {xs: 2, sm: 0, md: 2} }}>
+                            Submit
                         </Button>
+                        <Box sx={{display: "flex", justifyContent: "center"}}>
+                            {getProviders(authService.providers())}
+                        </Box>
                     </Box>
                 </Box>
-                <Copyright sx={{mt: {xs: 5, sm: 2, md: 5}}}/>
+                <Copyright sx={{ mt: {xs: 8, sm: 1, md: 8}, mb: {xs: 4, sm: 1, md: 4} }} />
             </Container>
         </ThemeProvider>
     );
 }
+export default LoginForm;
